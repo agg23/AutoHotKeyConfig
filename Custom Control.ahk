@@ -30,5 +30,11 @@ Return
 ;; General Controls
 ; Sleep Screen on F15 
 Pause::
-Run "C:\Windows\nircmd.exe" cmdwait 1000 monitor off
+; Run "C:\Windows\nircmd.exe" cmdwait 1000 monitor off
+DllCall("user32.dll\LockWorkStation")
+Return
+
+; Minimize Active Window
+^h::
+WinMinimize, A
 Return
